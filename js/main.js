@@ -10,11 +10,12 @@ if(localStorage.getItem('tasks')) {
   
   tasks = JSON.parse(localStorage.getItem('tasks'));
   console.log(tasks)
+  tasks.forEach((task) => {
+    renderTask (task)
+  })
 }
 
-tasks.forEach((task) => {
-  renderTask (task)
-})
+
 
 checkEmpyList();
 
